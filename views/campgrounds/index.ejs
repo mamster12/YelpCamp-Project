@@ -1,0 +1,45 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+	
+		<header class="jumbotron">
+			<div class="container">
+				<i class="material-icons" style="font-size: 4em">landscape</i>
+				<h1>Welcome To YelpCamp!</h1>
+				<p>Visit the most beautiful campsites across the globe!</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground(s)</a>
+				</p>
+			</div>
+		</header>		
+	
+	
+
+		<div class="row">
+			<% campgrounds.forEach(function(campground){ %>
+				<div class="col-lg-3 col-md-6 col-sm-12">
+					<!-- <figure class="figure p-1 bg-light shadow rounded">
+  						<img src="<%= campground.image %>" class="figure-img img-fluid rounded" alt="image">
+ 						 <figcaption class="figure-caption"><strong><%= campground.name %></strong></figcaption>
+						 <p>
+							 <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary btn-sm">More Info</a>
+						</p>
+					</figure>	 -->
+					<div class="card mb-2">
+					  <img src="<%= campground.image %>" class="card-img-top" alt="image">
+					  <div class="card-body">
+						<h5 class="card-title"><%= campground.name %></h5>
+						<a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+					  </div>
+					</div>
+				</div> <!-- end of column -->
+			<% }); %>
+		</div>
+
+	
+		
+		
+</div>
+
+
+<%- include("../partials/footer") %>
