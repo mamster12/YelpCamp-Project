@@ -17,7 +17,7 @@ var indexRouter 	 = require("./routes/index"),
 	commentRouter 	 = require("./routes/comments");
 
 
-//CONNECT TO DATABASE - MONGODB ATLAS
+//CONNECT TO DATABASE - MONGODB ATLAS db
 mongoose.connect(process.env.DATABASEURL, {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
