@@ -18,7 +18,6 @@ var indexRouter 	 = require("./routes/index"),
 
 
 //CONNECT TO DATABASE - MONGODB ATLAS
-// mongodb+srv://macvillegas:mac1q2w3e4r5t@cluster0-mspvq.mongodb.net/YelpCamp_v11?retryWrites=true&w=majority
 mongoose.connect(process.env.DATABASEURL, {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
